@@ -1,10 +1,51 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'osat/style.css' %}">
 </head>
 <body>
-$END$
+
+<div class="navbar navbar-inverse navbar-fixed-left">
+  <img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;">
+  <ul class="nav navbar-nav" style="padding-left:20px;">
+      <li><a href="{% url 'osat:index' %}">Home</a></li>
+      <!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<span class="caret"></span></a>
+         <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Home Coming</a></li>
+          <li><a href="#">Student</a></li>
+          <li><a href="#">Sub Menu3</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Sub Menu4</a></li>
+          <li><a href="#">Sub Menu5</a></li>
+         </ul>
+       </li>-->
+       <li><a href="#">Alumni Registration</a></li>
+       <li><a href="#">Homecoming Registration</a></li>
+       <li><a href="#">Other Events Registration</a></li>
+       <li><a href="#">Contact Us</a></li>
+       <li><a href="{% url 'osat:about' %}">About</a></li>
+  </ul>
+</div>
+
+<div class="container" style="padding-left:230px;">
+
+{% block body %}
+
+
+
+{% endblock %}
+</div>
 </body>
 </html>

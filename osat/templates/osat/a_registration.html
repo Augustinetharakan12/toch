@@ -1,4 +1,9 @@
 {% extends 'osat/base.html' %}
 {% block body %}
-<h1>About</h1>
+<h1>Alumni Registration</h1>
+    <form method="post"> {% csrf_token %}
+        <label>First Name</label>
+        {{ detailsform }}
+        <input type="submit" class="btn btn-primary">
+    </form>
 {% endblock %}
