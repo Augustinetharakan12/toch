@@ -42,7 +42,7 @@ svg {
     font: 30.5em 'Montserrat';
     width: 500px;
     height: 200px;
-    margin: 0 auto;
+    margin-left:400px ;
 }
 
 .text-copy {
@@ -81,4 +81,20 @@ svg {
 
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
+}
+input[type=submit]{
+background-color:#8e0000;
+border:black;
+color:white;
+text-align:center;
+text-decoration:none;
+display:inline_block;
+font-size:20;
+
+}
+.pbutton{
+padding:10px 350px;
+}
+.rform{
+color:white;
 }
