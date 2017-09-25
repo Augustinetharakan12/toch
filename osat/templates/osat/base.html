@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-left">
-  <img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;">
+  <a href="/osat/"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
       <li><a href="{% url 'osat:index' %}">Home</a></li>
       <!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<span class="caret"></span></a>
@@ -40,13 +40,13 @@
 </div>
   
 </div>
-<div class="container">
+<a href"/osat/"> <div class="container">
 	<div class="row">
-	<svg viewBox="0 0 960 300">
+<svg viewBox="0 0 960 300">
     <symbol id="s-text">
 		 <text text-anchor="middle" x="50%" y="80%">osat </text>
 	</symbol>
-
+	<a href="{% url 'osat:index' %}" style="text-decoration:none;">
 	<g class = "g-ants">
 		<use xlink:href="#s-text" class="text-copy"></use>
 		<use xlink:href="#s-text" class="text-copy"></use>
@@ -54,13 +54,14 @@
 		<use xlink:href="#s-text" class="text-copy"></use>
 		<use xlink:href="#s-text" class="text-copy"></use>
 	</g>
+	</a>
 </svg>
 	</div>
 
      <div class="row">
 
         </div>
-    </div>
+    </div></a>
 </div>
 
 
