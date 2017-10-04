@@ -18,8 +18,9 @@ def a_registration(request):
             a = alumni()
             a.fname = form['fname']
             a.lname = form['lname']
+            a.lname = form['lname']
             a.save()
-            return HttpResponse('Thank you for submitting')
+            return HttpResponse('Thank you for submitting'+str({{a.fname}}))
         else:
             return HttpResponse('Form invalid')
 
