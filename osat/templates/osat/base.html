@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>OSAT</title>
+    {% block modal %}
+
+
+
+    {% endblock %}
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,11 +23,7 @@
 
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
     <script type="text/javascript" src="{% static 'osat/script.js' %}"></script>
-    {% block modal %}
 
-
-
-     {% endblock %}
 </head>
 <body>
 {% block mod %}

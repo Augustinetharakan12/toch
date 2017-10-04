@@ -98,3 +98,12 @@ padding:25px 240px;
 .rform{
 color:white;
 }
+
+.fa {
+    padding: 20px;
+    font-size: 120px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
