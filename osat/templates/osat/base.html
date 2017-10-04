@@ -14,8 +14,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
+    <script type="text/javascript" src="{% static 'osat/script.js' %}"></script>
+    {% block modal %}
+
+
+
+     {% endblock %}
 </head>
 <body>
+{% block mod %}
+
+
+
+{% endblock %}
 <div class="navbar navbar-inverse navbar-fixed-left">
   <a href="/osat/"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
