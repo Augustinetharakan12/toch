@@ -4,17 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>OSAT</title>
-    {% block modal %}
-
-
-
-    {% endblock %}
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -22,15 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
-    <script type="text/javascript" src="{% static 'osat/script.js' %}"></script>
-
 </head>
 <body>
-{% block mod %}
-
-
-
-{% endblock %}
 <div class="navbar navbar-inverse navbar-fixed-left">
   <a href="/osat/"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
@@ -46,11 +31,15 @@
           <li><a href="#">Sub Menu5</a></li>
          </ul>
        </li>-->
+       
        <li><a href="{% url 'osat:a_registration' %}">Alumni Registration</a></li>
        <li><a href="h_registration/">Homecoming Registration</a></li>
        <li><a href="e_registration">Other Events Registration</a></li>
        <li><a href="c_us">Contact Us</a></li>
        <li><a href="{% url 'osat:about' %}">About</a></li>
+       <li><i class="fa fa-facebook-official" style="font-size:36px"> </i>	
+           <i class="fa fa-instagram" style="font-size:36px"> </i>
+           <i class="fa fa-whatsapp" style="font-size:36px"> </i></li>
   </ul>
 
 </div>
