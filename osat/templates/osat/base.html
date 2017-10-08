@@ -6,47 +6,36 @@
     <title>OSAT</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-left">
-  <a href="/osat/"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
+  <a href="{% url 'osat:index' %}"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
-      <li><a href="{% url 'osat:index' %}">Home</a></li>
-      <!--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<span class="caret"></span></a>
-         <ul class="dropdown-menu" role="menu">
-	  <li><p>User icon: <span class="glyphicon glyphicon-user"></span></p>    </li>
-          <li><a href="#">Home Coming</a></li>
-          <li><a href="#">Student</a></li>
-          <li><a href="#">Sub Menu3</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Sub Menu4</a></li>
-          <li><a href="#">Sub Menu5</a></li>
-         </ul>
-       </li>-->
-       
-       <li><a href="{% url 'osat:a_registration' %}">Alumni Registration</a></li>
-       <li><a href="h_registration/">Homecoming Registration</a></li>
-       <li><a href="e_registration">Other Events Registration</a></li>
-       <li><a href="c_us">Contact Us</a></li>
-       <li><a href="{% url 'osat:about' %}">About</a></li>
+        <li><a href="{% url 'osat:index' %}">Home</a></li>
+        <li><a href="{% url 'osat:a_registration' %}">Alumni Registration</a></li>	
+        <li><a href="h_registration/">Homecoming Registration</a></li>
+        <li><a href="e_registration">Other Events Registration</a></li>
+        <li><a href="c_us">Contact Us</a></li>
+        <li><a href="{% url 'osat:about' %}">About</a></li>
        <a href='#'><i class="fa fa-facebook-official" style="font-size:36px;color:gray;"></i></a>	
        <a href='#'><i class="fa fa-instagram" style="font-size:36px;color:gray;"></i></a>
        <a href='#'><i class="fa fa-whatsapp" style="font-size:36px;color:gray;"></i></a>
   </ul>
+</div>
 
+<div class="container">
+ <div class="row">
+
+ </div>
 </div>
-  
-</div>
-<a href"/osat/"> <div class="container">
-	<div class="row">
+<div class="row">
 <svg viewBox="0 0 960 300">
     <symbol id="s-text">
 		 <text text-anchor="middle" x="50%" y="80%">osat </text>
@@ -62,11 +51,34 @@
 	</a>
 </svg>
 	</div>
+<hr style="margin-left:200px;">
+
+ <div class="collapse navbar-collapse" id="menu-items" >
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-target="#notifications" data-toggle="collapse" style="color:white;padding-right:30px;"><i class="material-icons" style="font-size:30px">notifications</i></a></li>
+             <!--   <li><a href="#" style="color:white;">Message</a></li>
+                <li><a href="#" style="color:white;">Profile</a></li>-->
+            </ul>
+ </div>
+<div class="collapse" id="notifications" style="width:100%;padding-left:1100px;">
+        <hr>
+            <div class="row" style="width:100%;">
+
+                  <div class="col-sm-1" >
+                    <img src="resources/dp.jpg" style="width:40px; height:40px;">
+                  </div>
+                  <div class="col-sm-11">
+                    <span style="font-size:12px;">Rohit . 5 minutes ago</span><br>
+                    <span>Some notification here</span>
+                  </div>
+            </div>
+            <hr>
+        </div>
 
      <div class="row">
 
-        </div>
-    </div></a>
+     </div>
+   
 </div>
 
 
