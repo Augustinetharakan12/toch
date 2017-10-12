@@ -4,7 +4,7 @@ from . forms import *
 from . models import *
 def index(request):
     cont_dict={'notif' : notif.objects.all().order_by('-timestamp')}
-    return render(request, "osat/index.html", cont_dict+)
+    return render(request, "osat/index.html", cont_dict)
 
 
 

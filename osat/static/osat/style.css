@@ -1,3 +1,22 @@
+.modal-backdrop
+{
+    opacity:1 !important;
+}
+
+.modal.fade:not(.in).right .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+}
+
+.svg-logo{
+display: block;
+    font: 30.5em 'Montserrat';
+    width: 500px;
+    height: 200px;
+    margin-left:0px ;
+    margin-top:170px;
+}
+
 .navbar-fixed-left {
   width: 200px;
   position: fixed;
@@ -38,7 +57,7 @@ body{
   font-family: Arial;
 }
 
-svg {
+.svg-main-logo {
     display: block;
     font: 30.5em 'Montserrat';
     width: 500px;

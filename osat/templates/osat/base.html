@@ -11,9 +11,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="{% static 'osat/script.js' %}"></script>
 
 </head>
 <body>
@@ -42,7 +45,7 @@
  </div>
 </div>
 <div class="row">
-<svg viewBox="0 0 960 300">
+<svg viewBox="0 0 960 300" class="svg-main-logo">
     <symbol id="s-text">
 		 <text text-anchor="middle" x="50%" y="80%">osat </text>
 	</symbol>
@@ -93,7 +96,7 @@
                   <div class="col-sm-1" >
                     <!--<img src="resources/dp.jpg" style="width:40px; height:40px;">-->
                   </div>
-                  <div class="col-sm-11">
+                  <div class="col-sm-11" style="color:white;">
                       {% for n  in notif %}
                     <span >{{n.title}}</span><br>
                     <span >{{n.description}}</span><br>
