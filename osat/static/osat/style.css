@@ -113,6 +113,9 @@ color:white;
     bottom: 10;
     margin: 380px 0 0 -310px;
    }
+ hr{
+     border-top-color: #f2b746;
+ }
 /*a.noti:hover
 {
 background-color:white;

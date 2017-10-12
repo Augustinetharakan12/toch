@@ -15,12 +15,11 @@ def a_registration(request):
         form = detailsform(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            a = alumni()
-            a.fname = form['fname']
-            a.lname = form['lname']
-            a.lname = form['lname']
-            a.save()
-            return HttpResponse('Thank you for submitting'+str({{a.fname}}))
+            a=form.save(commit=False)
+            form.save()
+            #print ("hello")
+            #print (a.fname)
+            return render(request,'osat/submit.html', {'a':a})
         else:
             return HttpResponse('Form invalid')
 
