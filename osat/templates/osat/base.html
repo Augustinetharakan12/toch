@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,13 +31,13 @@
         <li><a href="e_registration">Other Events Registration</a></li>
         <li><a href="c_us">Contact Us</a></li>
         <li><a href="{% url 'osat:about' %}">About</a></li>
-      <li>  <div class="icon-bar">
-  <a class="active" href="#"><i class="fa fa-home"></i></a>
-  <a href="#"><i class="fa fa-search"></i></a>
-  <a href="#"><i class="fa fa-envelope"></i></a>
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <a href="#"><i class="fa fa-trash"></i></a>
-</div></li>
+      <li>
+          <div class="icon-bar">
+  <a href="#" style="a:hover {color:blue;}"><i class="fa fa-facebook-f" style="font-size:30px;"></i></a>
+  <a href="#"><i class="fa fa-instagram" style="font-size:30px;"></i></a>
+  <a href="#"><i class="fa fa-whatsapp" style="font-size:30px;"></i></a>
+</div>
+      </li>
   </ul>
 </div>
 
@@ -63,7 +65,6 @@
 </svg>
 
 <hr style="margin-left:200px;">
-
  <div class="collapse navbar-collapse" id="menu-items" >
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="noti" href="#" data-target="#notifications" data-toggle="collapse" style="color:white;padding-right:30px;"><i class="material-icons" style="font-size:40px;color:#f22424;">notifications</i></a></li>
