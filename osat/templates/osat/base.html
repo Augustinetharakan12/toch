@@ -13,6 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'osat/style.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-left">
@@ -24,9 +26,13 @@
         <li><a href="e_registration">Other Events Registration</a></li>
         <li><a href="c_us">Contact Us</a></li>
         <li><a href="{% url 'osat:about' %}">About</a></li>
-      <li><a href='#'><i class="fa fa-facebook-official" style="font-size:36px;color:gray;"></i></a></li>
-       <a href='#'><i class="fa fa-instagram" style="font-size:36px;color:gray;"></i></a>
-       <a href='#'><i class="fa fa-whatsapp" style="font-size:36px;color:gray;"></i></a>
+      <li>  <div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div></li>
   </ul>
 </div>
 
@@ -48,9 +54,11 @@
 		<use xlink:href="#s-text" class="text-copy"></use>
 		<use xlink:href="#s-text" class="text-copy"></use>
 	</g>
+
 	</a>
+
 </svg>
-	</div>
+
 <hr style="margin-left:200px;">
 
  <div class="collapse navbar-collapse" id="menu-items" >
@@ -83,11 +91,16 @@
             <div class="row" style="width:100%;">
 
                   <div class="col-sm-1" >
-                    <img src="resources/dp.jpg" style="width:40px; height:40px;">
+                    <!--<img src="resources/dp.jpg" style="width:40px; height:40px;">-->
                   </div>
                   <div class="col-sm-11">
-                    <span style="font-size:12px;">Rohit . 5 minutes ago</span><br>
-                    <span>Some notification here</span>
+                      {% for n  in notif %}
+                    <span >{{n.title}}</span><br>
+                    <span >{{n.description}}</span><br>
+                    <span >{{n.fname}}</span><br>
+                    <span>{{n.timestamp}}</span><br>
+                      <hr>
+                      {% endfor %}
                   </div>
             </div>
             <hr>

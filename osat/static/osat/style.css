@@ -148,6 +148,16 @@ background-color:white;
   margin-bottom: 10px;
   position: relative;
 }
+.btn{
+background-color:#8e0000;
+border:black;
+color:white;
+text-align:center;
+text-decoration:none;
+display:inline_block;
+font-size:20;
+
+}
 
 .loginmodal-container input[type=text], input[type=password] {
   height: 44px;
