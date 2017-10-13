@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54f35c2c-a7e2-427c-a29a-8ad2a144ae03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/osat/templates/osat/notifications.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/osat/models.py" afterPath="$PROJECT_DIR$/osat/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/osat/templates/osat/base.html" afterPath="$PROJECT_DIR$/osat/templates/osat/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toch/settings.py" afterPath="$PROJECT_DIR$/toch/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/osat/urls.py" afterPath="$PROJECT_DIR$/osat/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/osat/views.py" afterPath="$PROJECT_DIR$/osat/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/osat/templates/osat/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="114" column="100" lean-forward="false" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
+            <state relative-caret-position="150">
+              <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -42,6 +42,19 @@
                 <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/osat/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,21 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/osat/static/osat/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/osat/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="755">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -89,14 +92,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/osat/templates/osat/submit.html">
+      <file leaf-file-name="notifications.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/osat/templates/osat/notifications.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="575">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#7;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#9;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/osat/templates/osat/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,22 +144,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/osat/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/osat/templates/osat/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
+            <state relative-caret-position="659">
               <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -174,7 +183,6 @@
       <list>
         <option value="$PROJECT_DIR$/osat/templates/osat/about.html" />
         <option value="$PROJECT_DIR$/osat/forms.py" />
-        <option value="$PROJECT_DIR$/osat/urls.py" />
         <option value="$PROJECT_DIR$/toch/urls.py" />
         <option value="$PROJECT_DIR$/osat/templates/osat/a_registration.html" />
         <option value="$PROJECT_DIR$/osat/templates/osat/submit.html" />
@@ -182,9 +190,11 @@
         <option value="$PROJECT_DIR$/osat/static/osat/script.js" />
         <option value="$PROJECT_DIR$/osat/static/osat/style.css" />
         <option value="$PROJECT_DIR$/osat/templates/osat/index.html" />
-        <option value="$PROJECT_DIR$/osat/views.py" />
         <option value="$PROJECT_DIR$/toch/settings.py" />
         <option value="$PROJECT_DIR$/osat/models.py" />
+        <option value="$PROJECT_DIR$/osat/urls.py" />
+        <option value="$PROJECT_DIR$/osat/templates/osat/notifications.html" />
+        <option value="$PROJECT_DIR$/osat/views.py" />
         <option value="$PROJECT_DIR$/osat/templates/osat/base.html" />
       </list>
     </option>
@@ -438,33 +448,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/osat/templates/osat/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="14" lean-forward="false" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#1;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#2;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#6;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/osat/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -554,6 +537,7 @@
             <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -647,6 +631,7 @@
             <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,6 +666,7 @@
             <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -778,24 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/osat/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/osat/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/osat/templates/osat/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -814,7 +786,7 @@
         <state relative-caret-position="50">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,7 +796,7 @@
         <state relative-caret-position="50">
           <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -845,31 +817,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/osat/templates/osat/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/osat/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/osat/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,10 +843,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/osat/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/osat/templates/osat/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/osat/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/osat/templates/osat/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="114" column="100" lean-forward="false" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
+        <state relative-caret-position="150">
+          <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#li#6;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -914,6 +894,35 @@
             <element signature="n#style#0;n#span#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#8;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#9;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/osat/templates/osat/notifications.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#9;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/osat/templates/osat/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
