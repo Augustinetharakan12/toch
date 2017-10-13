@@ -1,3 +1,4 @@
+{% load mathfilters %}
 {% load staticfiles %}
 
 <html lang="en">
@@ -97,13 +98,28 @@
                     <!--<img src="resources/dp.jpg" style="width:40px; height:40px;">-->
                   </div>
                   <div class="col-sm-11" style="color:white;">
-                      {% for n  in notif %}
-                    <span >{{n.title}}</span><br>
+                      {% for n in notif %}
+                    <span style="color:#61646b;font-size:18">{{n.title}}</span><br>
                     <span >{{n.description}}</span><br>
-                    <span >{{n.fname}}</span><br>
-                    <span>{{n.timestamp}}</span><br>
+                    <span style="color:#374866;font-size:13px;">{{n.fname}}</span><br>
+                      {% if dn.day|sub:n.timestamp.day == 1%}
+                      <span style="color:#374151;font-size:13px;">{{dn.day|sub:n.timestamp.day}} day ago</span><br>
+                      {% elif dn.day|sub:n.timestamp.day > 1%}
+                      <span style="color:#374151;font-size:13px;">{{dn.day|sub:n.timestamp.day}} days ago</span><br>
+                      {% elif dn.hour|sub:n.timestamp.hour == 1%}
+                      <span style="color:#374151;font-size:13px;">{{dn.hour|sub:n.timestamp.hour}} hour ago</span><br>
+                      {% elif dn.hour > n.timestamp.hour %}
+                      <span style="color:#374151;font-size:13px;">{{dn.hour|sub:n.timestamp.hour}} hours ago</span><br>
+                      {% elif dn.minute|sub:n.timestamp.minute == 1%}
+                      <span style="color:#374151;font-size:13px;">{{dn.minute|sub:n.timestamp.minute}} minute ago</span><br>
+                      {% elif dn.minute > n.timestamp.minute %}
+                      <span style="color:#374151;font-size:13px;">{{dn.minute|sub:n.timestamp.minute}} minutes ago</span><br>
+                      {% elif dn.second > n.timestamp.second %}
+                      <span style="color:#374151;font-size:13px;">Now</span><br>
+                      {% endif %}
                       <hr>
                       {% endfor %}
+                      <a href="{% url 'osat:notific' %}" style="color:red;">View all</a>
                   </div>
             </div>
             <hr>

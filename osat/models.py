@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 
 class alumni(models.Model):
@@ -23,5 +24,7 @@ class notif(models.Model):
     title=models.CharField(max_length=50,null=True)
     description=models.CharField(max_length=50,null=True)
     timestamp=models.DateTimeField(auto_now_add=True)
+
+
 
 

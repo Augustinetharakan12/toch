@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['192.168.1.104', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+
     'osat.apps.OsatConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mathfilters',
 ]
 
 MIDDLEWARE = [
@@ -111,7 +113,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

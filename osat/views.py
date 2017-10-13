@@ -1,11 +1,12 @@
+import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 from . forms import *
 from . models import *
 def index(request):
-    cont_dict={'notif' : notif.objects.all().order_by('-timestamp')}
+    dn=datetime.datetime.now()
+    cont_dict={'notif' : notif.objects.all().order_by('-timestamp')[:3],'dn':dn}
     return render(request, "osat/index.html", cont_dict)
-
 
 
 def about(request):
@@ -32,3 +33,7 @@ def a_registration(request):
 
 
 
+def notific(request):
+    dn = datetime.datetime.now()
+    cont_dict2 = {'notif': notif.objects.all().order_by('-timestamp'), 'dn': dn}
+    return render(request, "osat/notifications.html", cont_dict2)
