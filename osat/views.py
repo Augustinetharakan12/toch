@@ -29,6 +29,12 @@ def a_registration(request):
             # if a GET (or any other method) we'll create a blank form
     else:
         return render(request, "osat/a_registration.html", {'detailsform': detailsform()})
+def h_registration(request):
+    return render(request,"osat/h_registration.html")
+def e_registration(request):
+    return render(request,"osat/e_registration.html")
+def c_us(request):
+    return render(request,"osat/c_us.html")
 
 
 

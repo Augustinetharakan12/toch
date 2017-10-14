@@ -27,9 +27,9 @@
   <ul class="nav navbar-nav" style="padding-left:20px;">
         <li><a href="{% url 'osat:index' %}">Home</a></li>
         <li><a href="{% url 'osat:a_registration' %}">Alumni Registration</a></li>	
-        <li><a href="h_registration/">Homecoming Registration</a></li>
-        <li><a href="e_registration">Other Events Registration</a></li>
-        <li><a href="c_us">Contact Us</a></li>
+        <li><a href="{% url 'osat:h_registration' %}">Homecoming Registration</a></li>
+        <li><a href="{% url 'osat:e_registration' %}">Other Events Registration</a></li>
+        <li><a href="{% url 'osat:c_us' %}">Contact Us</a></li>
         <li><a href="{% url 'osat:about' %}">About</a></li>
       <li>
           <div class="icon-bar">
