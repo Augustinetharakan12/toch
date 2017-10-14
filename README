@@ -7,6 +7,8 @@ type "python --version" and if it shows the version you are ready to go
 after that install django using the command "python -m pip install django" (it might take some time)
 
 after downloading django ...
+
+install mathfilters using the command "python -m pip install django-mathfilters"
  
 to check if django is present type "python -m djamgo --version" if it shows version you are ready to go
 
