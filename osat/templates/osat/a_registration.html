@@ -2,7 +2,7 @@
 {% block body %}
 <h1 style="color:#d6d6d6;">Alumni Registration</h1>
     <form method="post"> {% csrf_token %}
-        <div class="rform" style="width:70%;"
+        <div class="rform" style="width:80%;"
     <label >First Name</label>
         {{ detailsform.fname }}
 	<label >Last Name</label>
@@ -20,7 +20,7 @@
 	<label >street</label>
         {{ detailsform.a_street }}
 	<label >city</label>
- `       {{ detailsform.a_city }}
+        {{ detailsform.a_city }}
 	<label >state</label>
         {{ detailsform.a_state }}
 	<label >country</label>
