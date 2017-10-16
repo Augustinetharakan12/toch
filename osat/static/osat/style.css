@@ -26,7 +26,10 @@ padding-right:20px;
 
 .fa-facebook {
   color: #3B5998;
- font-size:10.2em;
+
+}
+.fa-facebook:hover{
+color:#0d67dd;
 
 }
 .fa-whatsapp {
@@ -35,27 +38,27 @@ padding-right:20px;
 }
 
 .fa-whatsapp:hover {
-  color: green;
+  color: #21d811;
 
 }
 
 .fa-instagram {
 
-  color: #e90025;
+  color: #c41176;
 }
 
 .fa-instagram:hover {
-  color:#e90025 ;
+  color:#f215ac;
 
 }
 
 .fa-youtube {
 
-  color: #E72318;
+  color: #c61b1b;
 }
 
 .fa-youtube:hover {
-  color:#E72318;
+  color:#ff0a0a;
 
 }
 
