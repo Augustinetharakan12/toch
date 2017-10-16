@@ -1,8 +1,62 @@
 .icon-bar > a {
-    color: grey;
+    font-size:25px;
+    margin: 20px 0 0 7.3px;
 }
-.icon-bar > a:hover {
+/*.icon-bar > a:hover {
     color:white;
+}
+*/
+
+/*.notif{
+
+padding-right:20px;
+}
+.notif:hover{
+ color:green;
+}
+*/
+.fa {
+  padding: 2px;
+  /*width: 40px;
+  height: 40px;*/
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.fa-facebook {
+  color: #3B5998;
+ font-size:10.2em;
+
+}
+.fa-whatsapp {
+  color: green;
+
+}
+
+.fa-whatsapp:hover {
+  color: green;
+
+}
+
+.fa-instagram {
+
+  color: #e90025;
+}
+
+.fa-instagram:hover {
+  color:#e90025 ;
+
+}
+
+.fa-youtube {
+
+  color: #E72318;
+}
+
+.fa-youtube:hover {
+  color:#E72318;
+
 }
 
 .modal-backdrop
@@ -123,6 +177,7 @@ padding:25px 240px;
 }
 .rform{
 color:white;
+
 }
 
 
