@@ -35,12 +35,15 @@ $(document).ready(function(){
         $("#log2").hide();
         $("#s-text").hide();
         $("#log3").hide();
+        $("#log4").hide();
         $("#nav1").hide();
         $("#nav2").hide();
+
         $("#log1").fadeIn(3000);
         $("#log2").fadeIn(3000);
         $("#s-text").fadeIn(3000);
         $("#log3").fadeIn(3000);
+        $("#log4").fadeIn(3000);
         $("#nav1").fadeIn(10000);
         $("#nav2").fadeIn(10000);
         createCookie('osat-visit', '', 0.001);
