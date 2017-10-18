@@ -1,3 +1,5 @@
+{% load static %}
+
 .icon-bar > a {
     font-size:25px;
     margin: 20px 0 0 7.3px;
@@ -140,6 +142,7 @@ body{
     width: 500px;
     height: 200px;
     margin-left:520px ;
+    text-align:center;
 }
 
 .text-copy {

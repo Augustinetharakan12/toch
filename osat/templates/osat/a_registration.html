@@ -1,8 +1,9 @@
 {% extends 'osat/base.html' %}
 {% block body %}
+<div id="reg1">
 <h1 style="color:#d6d6d6;">Alumni Registration</h1>
     <form method="post"> {% csrf_token %}
-        <div class="rform" style="width:80%;"
+        <div class="rform" id="reg2" style="width:80%;"
     <label >First Name</label>
         {{ detailsform.fname }}
 	<label >Last Name</label>
@@ -27,9 +28,10 @@
         {{ detailsform.a_country }}
 	<label >Pin</label>
         {{ detailsform.a_pin }}
-        <div class="pbutton">
+        <div class="pbutton" id="reg3">
         <input type="submit" class="btn btn-primary">
         </div>
         </div>
     </form>
+  </div>
 {% endblock %}

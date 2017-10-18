@@ -25,8 +25,8 @@
     <script src="{% static 'osat/script.js' %}"></script>
 
 </head>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-left">
+<body >
+<div class="navbar navbar-inverse navbar-fixed-left" id="nav1">
   <a href="{% url 'osat:index' %}"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
         <li><a href="{% url 'osat:index' %}">Home</a></li>
@@ -36,7 +36,7 @@
         <li><a href="{% url 'osat:c_us' %}">Contact Us</a></li>
         <li><a href="{% url 'osat:about' %}">About</a></li>
       <li>
-          <div class="icon-bar" >
+          <div class="icon-bar" id="nav2" >
               <a href="#" class="fa fa-facebook" style="text-decoration:none;"></a>
               <a href="#" class="fa fa-instagram" style="text-decoration:none;"></a>
               <a href="#" class="fa fa-youtube" style="text-decoration:none;"></a>
@@ -51,18 +51,14 @@
   </ul>
 </div>
 
-<div class="container">
- <div class="row">
 
- </div>
-</div>
-<div class="row">
-<svg viewBox="0 0 960 300" class="svg-main-logo">
-    <symbol id="s-text">
-		 <text text-anchor="middle" x="50%" y="80%">osat </text>
+<div class="row" id="log1">
+<svg viewBox="0 0 1200 400" class="svg-main-logo" id="log2">
+    <symbol id="s-text" >
+		 <text text-anchor="middle" x="50%" y="80%">OSAT </text>
 	</symbol>
 	<a href="{% url 'osat:index' %}" style="text-decoration:none;">
-	<g class = "g-ants">
+	<g class = "g-ants" id="log3">
 		<use xlink:href="#s-text" class="text-copy"></use>
 		<use xlink:href="#s-text" class="text-copy"></use>
 		<use xlink:href="#s-text" class="text-copy"></use>
