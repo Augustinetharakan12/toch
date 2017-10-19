@@ -1,12 +1,12 @@
 import datetime
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 from . forms import *
 from . models import *
 def index(request):
     dn=datetime.datetime.now()
-    cont_dict={'notif' : notif.objects.all().order_by('-timestamp')[:3],'dn':dn}
+    cont_dict={'notif' : notif.objects.all().order_by('-timestamp')[:2],'dn':dn}
     return render(request, "osat/index.html", cont_dict)
 
 
@@ -44,3 +44,8 @@ def notific(request):
     dn = datetime.datetime.now()
     cont_dict2 = {'notif': notif.objects.all().order_by('-timestamp'), 'dn': dn}
     return render(request, "osat/notifications.html", cont_dict2)
+
+
+
+def example(request):
+    return JsonResponse({"data": "hello world"})

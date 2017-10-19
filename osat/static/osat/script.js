@@ -21,8 +21,11 @@ $(document).ready(function(){
     $("#slid3").fadeIn(2000);
     $("#slid4").fadeIn(2000);
     $("#slid5").fadeIn(2000);
+    $("#slid5").attr("style","");
     $("#slid6").fadeIn(2000);
+    $("#slid6").attr("style","");
     $("#slid7").fadeIn(2000);
+    $("#slid7").attr("style","");
     $("#menu-items").fadeIn(2000);
     $("#div3").fadeIn(1000);
     $("#reg1").fadeIn(1000);

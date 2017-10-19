@@ -25,7 +25,7 @@
     <script src="{% static 'osat/script.js' %}"></script>
 
 </head>
-<body >
+<body background="{% static 'osat/image1.jpeg' %}">
 <div class="navbar navbar-inverse navbar-fixed-left" id="nav1">
   <a href="{% url 'osat:index' %}"><img src="{% static 'osat/logo.jpg' %}" style="width:200px;height:200px;padding:10px;"></a>
   <ul class="nav navbar-nav" style="padding-left:20px;">
@@ -41,12 +41,7 @@
               <a href="#" class="fa fa-instagram" style="text-decoration:none;"></a>
               <a href="#" class="fa fa-youtube" style="text-decoration:none;"></a>
               <a href="#" class="fa fa-whatsapp" style="text-decoration:none;"></a>
-
-  <!--<a href="#" style=""><i class="fa fa-facebook-f" style="font-size:30px;width:27px;"></i></a>
-  <a href="#"><i class="fa fa-instagram" style="font-size:30px;width:35px;"></i></a>
-  <a href="#"><i class="fa fa-whatsapp" style="font-size:30px;width:35px;"></i></a>
-   -->
-          </div>
+    </div>
       </li>
   </ul>
 </div>
@@ -124,10 +119,14 @@
                       <a href="{% url 'osat:notific' %}" style="color:red;">View all</a>
                   </div>
             </div>
-            <hr>
         </div>
   </div>
  </div>
+{% block about %}
+
+
+
+{% endblock %}
 
 </body>
 

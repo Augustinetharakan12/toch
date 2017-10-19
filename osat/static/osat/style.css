@@ -1,8 +1,8 @@
-{% load static %}
+{% load staticfiles %}
 
 .icon-bar > a {
     font-size:25px;
-    margin: 20px 0 0 7.3px;
+    margin: 20px 0 0 7px;
 }
 
 /*.fade-scale {
@@ -132,8 +132,9 @@ html, body{
 }
 
 body{
-  background:black;
-  font-family: Arial;
+ /* background-image:url("{% static 'osat/image1.jpeg' %}");*/
+  /*background:black;
+  font-family: Arial;*/
 }
 
 .svg-main-logo {
