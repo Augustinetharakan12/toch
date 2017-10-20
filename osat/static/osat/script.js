@@ -49,7 +49,7 @@ $(document).ready(function(){
         $("#log4").fadeIn(3000);
         $("#nav1").fadeIn(10000);
         $("#nav2").fadeIn(10000);
-        createCookie('osat-visit', '', 0.001);
+        createCookie('osat-visit', '', 0.01);
     }
 });
 
