@@ -13,7 +13,7 @@ class detailsform(forms.ModelForm):
 class ec_form(forms.ModelForm):
     class Meta:
         model=ec
-        fields=('fname',)
+        fields=('fname','lname')
     def __init__(self, *args, **kwargs):
         super(ec_form, self).__init__(*args, **kwargs)
         for field in iter(self.fields):

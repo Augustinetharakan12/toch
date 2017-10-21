@@ -2,14 +2,16 @@
 {% load staticfiles %}
 {% block body %}
 <div id="reg1">
-<form method="post"> {% csrf_token %}
-    <div class="rform" id="reg2" style="width:120%;">
+    <form method="post"> {% csrf_token %}
+        <div class="rform" id="reg2" style="width:120%;">
     <label >First Name</label>
         {{ ec_form.fname }}
+	<label >Last Name</label>
+        {{ ec_form.lname }}
         <div class="pbutton" id="reg3">
-            <input type="submit" class="btn btn-primary">
+        <input type="submit" class="btn btn-primary">
         </div>
-    </div>
-</div>
-</form>
+        </div>
+    </form>
+  </div>
 {% endblock %}
