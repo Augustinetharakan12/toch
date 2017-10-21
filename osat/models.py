@@ -32,5 +32,14 @@ class notif(models.Model):
     def __str__(self):
         return self.title+' '+ self.fname
 
+class ec(models.Model):
+    fname=models.CharField(max_length=50,null=True)
+    lname=models.CharField(max_length=50,null=True)
+    def __str__(self):
+        return ' '+ self.fname
+class det(models.Model):
+    h=models.CharField(max_length=50,null=True)
+
+
 
 

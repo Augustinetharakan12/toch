@@ -1,0 +1,15 @@
+{% extends 'osat/base.html' %}
+{% load staticfiles %}
+{% block body %}
+<div id="reg1">
+<form method="post"> {% csrf_token %}
+    <div class="rform" id="reg2" style="width:120%;">
+    <label >First Name</label>
+        {{ ec_form.fname }}
+        <div class="pbutton" id="reg3">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </div>
+</div>
+</form>
+{% endblock %}
