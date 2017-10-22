@@ -39,8 +39,10 @@ class ec(models.Model):
     event=models.CharField(max_length=50,null=True)
     def __str__(self):
         return ' '+ self.email+' '+self.event
-class det(models.Model):
-    h=models.CharField(max_length=50,null=True)
+class ec_login(models.Model):
+    email=models.CharField(max_length=50,null=True)
+    password=models.CharField(max_length=50,null=True)
+
 
 
 
