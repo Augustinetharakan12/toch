@@ -33,10 +33,12 @@ class notif(models.Model):
         return self.title+' '+ self.fname
 
 class ec(models.Model):
-    fname=models.CharField(max_length=50,null=True)
-    lname=models.CharField(max_length=50,null=True)
+    email=models.CharField(max_length=50,null=True)
+    password1=models.CharField(max_length=50,null=True)
+    password2=models.CharField(max_length=50,null=True)
+    event=models.CharField(max_length=50,null=True)
     def __str__(self):
-        return ' '+ self.fname
+        return ' '+ self.email+' '+self.event
 class det(models.Model):
     h=models.CharField(max_length=50,null=True)
 

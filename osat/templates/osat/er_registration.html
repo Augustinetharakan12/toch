@@ -1,5 +1,10 @@
 {% extends 'osat/base.html' %}
 {% load staticfiles %}
 {% block body %}
-<img src="{% static 'osat/sitecons.jpg' %}">
+    <p>Select the event you want to register for</p>
+    <ul>
+    {% for i in a %}
+<li><a href="#">{{ i.event }}</a></li>
+    {%  endfor %}
+    </ul>
 {% endblock %}

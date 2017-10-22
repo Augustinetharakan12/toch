@@ -75,11 +75,13 @@ def ec_registration(request):
 
             # if a GET (or any other method) we'll create a blank form
     else:
-        return render(request, "osat/ec_registration.html", {'detailsform': detailsform()})
+        return render(request, "osat/ec_registration.html", {'ec_form': ec_form()})
 
 
 def er_registration(request):
-    return render(request,"osat/er_registration.html")
+    a=ec
+    a=a.objects.all()
+    return render(request,"osat/er_registration.html",{'a':a})
 
 def el_registration(request):
     return render(request,"osat/el_registration.html")

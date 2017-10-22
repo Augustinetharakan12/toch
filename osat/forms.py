@@ -13,7 +13,8 @@ class detailsform(forms.ModelForm):
 class ec_form(forms.ModelForm):
     class Meta:
         model=ec
-        fields=('fname','lname')
+        fields=('email','password1','password2','event')
+        widgets={'password1':forms.PasswordInput(),'password2':forms.PasswordInput()}
     def __init__(self, *args, **kwargs):
         super(ec_form, self).__init__(*args, **kwargs)
         for field in iter(self.fields):
