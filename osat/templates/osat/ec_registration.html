@@ -8,8 +8,10 @@
         {{ ec_form.email }}
     <label >Password</label>
         {{ ec_form.password1 }}
-    <label >Retype the Password</label>
+    <label >Retype the Password {% block passmatch %}
+          {% endblock %}</label>
         {{ ec_form.password2 }}
+
     <label >Name of the event</label>
         {{ ec_form.event }}
         <div class="pbutton" id="reg3">

@@ -1,3 +1,4 @@
+
 import datetime
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
@@ -64,12 +65,18 @@ def ec_registration(request):
         # create a form instance and populate it with data from the request:
         form = ec_form(request.POST)
         # check whether it's valid:
-        if form.is_valid():
-            a=form.save(commit=False)
-            form.save()
-            print ("hello")
 
-            return render(request,'osat/submit.html', {'a':a})
+
+        if form.is_valid():
+            if form.data['password1'] == form.data['password2']:
+                a=form.save(commit=False)
+                form.save()
+                print ("hello")
+                return render(request, 'osat/submit.html', {'a': a})
+            elif form.data['event'] in ev:
+                return HttpResponse('event already excists')
+            else:
+                return render(request,'osat/ec_registrationpassmatch.html',{'ec_form': ec_form()})
         else:
             return HttpResponse('Form invalid')
 
@@ -85,5 +92,8 @@ def er_registration(request):
 
 def el_registration(request):
     return render(request,"osat/el_registration.html")
+
+def el_registrationpassmatch(request):
+    return render(request,"osat/ec_registrationpassmatch.html")
 
 
