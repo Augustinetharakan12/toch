@@ -65,18 +65,26 @@ def ec_registration(request):
         # create a form instance and populate it with data from the request:
         form = ec_form(request.POST)
         # check whether it's valid:
-
-
+        pass1=0
+        event1=0
+        email1=0
+        ev=[]
+        ev1=ec.objects.all().values_list('event',flat='true')
+        em1=alumni.objects.all().values_list('email',flat='true')
         if form.is_valid():
-            if form.data['password1'] == form.data['password2']:
+            if form.data['password1'] != form.data['password2'] or form.data['event'] in ev or form.data['email'] not in em1:
+                if form.data['password1'] != form.data['password2'] :
+                    pass1=1
+                if form.data['event'] in ev1:
+                    event1=1
+                if form.data['email'] not in em1:
+                    email1=1
+                return render(request, 'osat/ec_registrationpassmatch.html', {'ec_form': ec_form(),'pass1':pass1,'event1':event1,'email1':email1})
+            else:
                 a=form.save(commit=False)
                 form.save()
                 print ("hello")
                 return render(request, 'osat/submit.html', {'a': a})
-            elif form.data['event'] in ev:
-                return HttpResponse('event already excists')
-            else:
-                return render(request,'osat/ec_registrationpassmatch.html',{'ec_form': ec_form()})
         else:
             return HttpResponse('Form invalid')
 
