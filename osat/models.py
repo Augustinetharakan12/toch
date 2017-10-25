@@ -40,7 +40,8 @@ class ec(models.Model):
 class ec_login(models.Model):
     email=models.CharField(max_length=50,null=True)
     password=models.CharField(max_length=50,null=True)
-
+    def __str__(self):
+        return ' '+ self.email+' '+self.password
 class alumnievent(models.Model):
     email=models.CharField(max_length=50,null=True)
 

@@ -99,10 +99,15 @@ def er_registration(request):
     return render(request,"osat/er_registration.html",{'a':a})
 
 def el_registration(request):
-    return render(request,"osat/el_registration.html")
+    if request.method == 'POST':
+        form = ec_login_form(request.POST)
+        if form.is_valid():
+            return HttpResponse('nice 1 man')
+    else:
+        return render(request,"osat/el_registration.html",{'ec_login_form':ec_login_form()})
 
 def el_registrationpassmatch(request):
-    return render(request,"osat/ec_registrationpassmatch.html")
+        return render(request,"osat/ec_registrationpassmatch.html")
 
 def er_registration2(request,x):
     al=alumni.objects.all().values_list('email',flat='true')

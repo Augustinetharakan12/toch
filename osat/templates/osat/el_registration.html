@@ -1,5 +1,15 @@
 {% extends 'osat/base.html' %}
 {% load staticfiles %}
 {% block body %}
-<img src="{% static 'osat/sitecons.jpg' %}">
+<form method="post"> {% csrf_token %}
+        <div class="rform" id="reg2" style="width:120%;">
+    <label >E-mail</label>
+        {{ ec_login_form.email }}
+	<label >Password</label>
+        {{ ec_login_form.password }}
+        <div class="pbutton" id="reg3">
+        <input type="submit" class="btn btn-primary">
+        </div>
+        </div>
+    </form>
 {% endblock %}

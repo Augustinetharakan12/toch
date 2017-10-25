@@ -32,3 +32,14 @@ class alumnievent_form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class':'form-control',
             })
+class ec_login_form(forms.ModelForm):
+    class Meta:
+        model=ec_login
+        fields=('email','password')
+        widgets={'password':forms.PasswordInput()}
+    def __init__(self, *args, **kwargs):
+        super(ec_login_form, self).__init__(*args,**kwargs)
+        for field in iter(self.fields):
+            self.fields[field].widget.attrs.update({
+                'class':'form-control',
+            })
