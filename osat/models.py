@@ -17,11 +17,9 @@ class alumni(models.Model):
     a_state = models.CharField(max_length=200,null=True)
     a_country = models.CharField(max_length=200,null=True)
     a_pin = models.CharField(max_length=50,null=True)
-    def disp(self):
-        print("name=",self.fname, end="\t")
-        print("last name=",self.lname, end="\t")
-        print("year of pass=",self.year_pass,end="\t")
-        print("phone no=",self.phno,end="\t")
+    #event info
+    event=models.CharField(max_length=30,default='none')
+
     def __str__(self):
         return self.fname+' '+ self.lname
 class notif(models.Model):
@@ -43,7 +41,8 @@ class ec_login(models.Model):
     email=models.CharField(max_length=50,null=True)
     password=models.CharField(max_length=50,null=True)
 
-
+class alumnievent(models.Model):
+    email=models.CharField(max_length=50,null=True)
 
 
 

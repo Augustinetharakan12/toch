@@ -21,3 +21,14 @@ class ec_form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class': 'form-control',
             })
+
+class alumnievent_form(forms.ModelForm):
+    class Meta:
+        model=alumnievent
+        fields=('email',)
+    def __init__(self,*args, **kwargs):
+        super(alumnievent_form,self).__init__(*args, **kwargs)
+        for field in iter(self.fields):
+            self.fields[field].widget.attrs.update({
+                'class':'form-control',
+            })

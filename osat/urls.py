@@ -15,6 +15,7 @@ urlpatterns = [
 
     url(r'^ec_registration/$', views.ec_registration, name='ec_registration'),
     url(r'^er_registration/$', views.er_registration, name='er_registration'),
+    url(r'^er_registration/(?P<x>[\w\-]+)$', views.er_registration2, name='er_registration2'),
     url(r'^el_registration/$', views.el_registration, name='el_registration'),
     url(r'^el_registrationpassmatch/$', views.el_registrationpassmatch, name='el_registrationpassmatch'),
 
