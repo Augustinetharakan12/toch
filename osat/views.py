@@ -68,11 +68,10 @@ def ec_registration(request):
         pass1=0
         event1=0
         email1=0
-        ev=[]
         ev1=ec.objects.all().values_list('event',flat='true')
         em1=alumni.objects.all().values_list('email',flat='true')
         if form.is_valid():
-            if form.data['password1'] != form.data['password2'] or form.data['event'] in ev or form.data['email'] not in em1:
+            if form.data['password1'] != form.data['password2'] or form.data['event'] in ev1 or form.data['email'] not in em1:
                 if form.data['password1'] != form.data['password2'] :
                     pass1=1
                 if form.data['event'] in ev1:
@@ -102,10 +101,14 @@ def el_registration(request):
     if request.method == 'POST':
         form = ec_login_form(request.POST)
         if form.is_valid():
-            return HttpResponse('nice 1 man')
+            print(form.data['password'])
+            print(ec.objects.filter(email=form.data['email']).values_list('password1',flat='true'))
+            if form.data['password'] in ec.objects.filter(email=form.data['email']).values_list('password1',flat='true'):
+                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 0,'suc':1,'obj':alumni.objects.all(),'obj':alumni.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
+            else:
+                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 1,'suc':0,'obj':alumni.objects.all(),'obj':alumni.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
     else:
-        return render(request,"osat/el_registration.html",{'ec_login_form':ec_login_form()})
-
+        return render(request,"osat/el_registration.html",{'ec_login_form':ec_login_form(),'pass1':0,'suc':0,'obj':alumni.objects.all(),'event':0})
 def el_registrationpassmatch(request):
         return render(request,"osat/ec_registrationpassmatch.html")
 
