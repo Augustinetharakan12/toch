@@ -25,14 +25,16 @@
       </tr>
     </thead>
     <tbody>
-    {% for i in obj %}
-    {% if i.event in event %}
+    {% for i in obj2 %}
+    {% for j in obj1 %}
+    {% if i.email == j.email and i.event in event %}
       <tr>
-        <td>{{ i.fname }}</td>
-        <td>{{ i.phno }}</td>
-        <td>{{ i.email }}</td>
+        <td>{{ j.fname }}</td>
+        <td>{{ j.phno }}</td>
+        <td>{{ j.email }}</td>
       </tr>
     {% endif %}
+    {% endfor %}
     {% endfor %}
     </tbody>
   </table>

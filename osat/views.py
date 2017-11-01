@@ -104,11 +104,11 @@ def el_registration(request):
             print(form.data['password'])
             print(ec.objects.filter(email=form.data['email']).values_list('password1',flat='true'))
             if form.data['password'] in ec.objects.filter(email=form.data['email']).values_list('password1',flat='true'):
-                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 0,'suc':1,'obj':alumni.objects.all(),'obj':alumni.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
+                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 0,'suc':1,'obj1':alumni.objects.all(),'obj2':alumnievent.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
             else:
-                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 1,'suc':0,'obj':alumni.objects.all(),'obj':alumni.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
+                return render(request, "osat/el_registration.html", {'ec_login_form': ec_login_form(), 'pass1': 1,'suc':0,'obj1':alumni.objects.all(),'obj2':alumnievent.objects.all(),'event':ec.objects.filter(email=form.data['email']).values_list('event',flat='true')})
     else:
-        return render(request,"osat/el_registration.html",{'ec_login_form':ec_login_form(),'pass1':0,'suc':0,'obj':alumni.objects.all(),'event':0})
+        return render(request,"osat/el_registration.html",{'ec_login_form':ec_login_form(),'pass1':0,'suc':0,'obj1':alumni.objects.all(),'event':0})
 def el_registrationpassmatch(request):
         return render(request,"osat/ec_registrationpassmatch.html")
 
