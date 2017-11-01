@@ -44,6 +44,8 @@ class ec_login(models.Model):
         return ' '+ self.email+' '+self.password
 class alumnievent(models.Model):
     email=models.CharField(max_length=50,null=True)
+    event=models.CharField(max_length=50,default='None')
+    #def event(self,event):
 
 
 

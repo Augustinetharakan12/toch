@@ -112,7 +112,7 @@ def el_registration(request):
 def el_registrationpassmatch(request):
         return render(request,"osat/ec_registrationpassmatch.html")
 
-def er_registration2(request,x):
+def er_registration2(request, x):
     al=alumni.objects.all().values_list('email',flat='true')
     if request.method == 'POST':
         form = alumnievent_form(request.POST)
@@ -120,8 +120,11 @@ def er_registration2(request,x):
             if form.data['email'] not in al:
                 return render(request, "osat/ers_registration.html",{'alumnievent_form': alumnievent_form, 'email1': 1,'suc':0})
             else:
-                i=alumni.objects.filter(email=form.data['email'])
-                i.update(event=x)
+                a=form.save(commit=False)
+                a.event=x
+                a.save()
+                #i=alumni.objects.filter(email=form.data['email'])
+                #i.update(event=x)
                 return render(request, "osat/ers_registration.html",{'alumnievent_form': alumnievent_form, 'email1': 0,'suc':1})
     else:
         return render(request, "osat/ers_registration.html",{'alumnievent_form':alumnievent_form,'email1':0,'suc':0})
