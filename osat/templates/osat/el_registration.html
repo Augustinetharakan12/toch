@@ -14,7 +14,8 @@
         </div>
     </form>
 {% elif suc == 1 %}
-    <p>Login success - {{ event }}</p>
+<h1>Login success</h1>
+        <h2>event- {% for i in event %}{{ i }}{% endfor %}</h2>
     <div class="container" style="width:700px;">
   <table class="table">
     <thead>
