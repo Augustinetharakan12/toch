@@ -129,4 +129,15 @@ def er_registration2(request, x):
     else:
         return render(request, "osat/ers_registration.html",{'alumnievent_form':alumnievent_form,'email1':0,'suc':0})
 
+def el_registration3(request):
+    if request.method == 'POST':
+        form = view_events_form(request.POST)
+        obj2 = alumnievent.objects.filter(email=form.data['email'])
+        mail = alumnievent.objects.all().values_list('email', flat='true')
+        if form.is_valid() and form.data['email'] in mail :
+            return render(request,'osat/view_events.html', {'view_events_form':view_events_form,'suc':1,'obj2':obj2,'email1':0})
+        else:
+            return render(request, 'osat/view_events.html', {'view_events_form':view_events_form,'suc': 0, 'obj2': obj2,'email1':1})
+    else:
+        return render(request,"osat/view_events.html",{'view_events_form':view_events_form,'suc':0,'email1':0})
 

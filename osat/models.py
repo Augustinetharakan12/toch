@@ -47,5 +47,9 @@ class alumnievent(models.Model):
     event=models.CharField(max_length=50,default='None')
     #def event(self,event):
 
+class view_events(models.Model):
+    email = models.CharField(max_length=50, null=True)
+
+
 
 

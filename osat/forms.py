@@ -43,3 +43,13 @@ class ec_login_form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class':'form-control',
             })
+class view_events_form(forms.ModelForm):
+    class Meta:
+        model=view_events
+        fields=('email',)
+    def __init__(self,*args,**kwargs):
+        super(view_events_form,self).__init__(*args, **kwargs)
+        for field in iter(self. fields):
+            self.fields[field].widget.attrs.update({
+                'class':'form-control'
+            })
