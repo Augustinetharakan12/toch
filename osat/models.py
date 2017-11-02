@@ -20,10 +20,12 @@ class alumni(models.Model):
     #event info
     event=models.CharField(max_length=30,default='none')
 
+    no_attending=models.IntegerField(default=0)
+
     def __str__(self):
         return self.fname+' '+ self.lname
 class notif(models.Model):
-    fname=models.CharField(max_length=50,null=True)
+    fname=models.CharField(max_length=510,null=True)
     title=models.CharField(max_length=50,null=True)
     description=models.CharField(max_length=50,null=True)
     timestamp=models.DateTimeField(auto_now_add=True)
@@ -50,6 +52,8 @@ class alumnievent(models.Model):
 class view_events(models.Model):
     email = models.CharField(max_length=50, null=True)
 
-
+class homecoming(models.Model):
+    email=models.CharField(max_length=50,null=True)
+    no_attending=models.IntegerField(null=True)
 
 

@@ -53,3 +53,13 @@ class view_events_form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class':'form-control'
             })
+class no_attending_form(forms.ModelForm):
+    class Meta:
+        model=homecoming
+        fields=('email','no_attending')
+    def __init__(self,*args,**kwargs):
+        super(no_attending_form,self).__init__(*args,**kwargs)
+        for field in iter(self.fields):
+            self.fields[field].widget.attrs.update({
+                'class':'form-control'
+            })

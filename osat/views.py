@@ -32,14 +32,33 @@ def a_registration(request):
     else:
         return render(request, "osat/a_registration.html", {'detailsform': detailsform()})
 def h_registration(request):
-    return render(request,"osat/h_registration.html")
+    if request.method == 'POST':
+        form = _form(request.POST)
+        obj2 = alumnievent.objects.filter(email=form.data['email'])
+        mail = alumnievent.objects.all().values_list('email', flat='true')
+        if form.is_valid() and form.data['email'] in mail :
+            return render(request,'osat/view_events.html', {'view_events_form':view_events_form,'suc':1,'obj2':obj2,'email1':0})
+        else:
+            return render(request, 'osat/view_events.html', {'view_events_form':view_events_form,'suc': 0, 'obj2': obj2,'email1':1})
+    else:
+        return render(request,"osat/view_events.html",{'view_events_form':view_events_form,'suc':0,'email1':0})
 def e_registration(request):
     return render(request,"osat/e_registration.html")
 def c_us(request):
     return render(request,"osat/c_us.html")
 
 def h_registration(request):
-    return render(request,"osat/h_registration.html")
+    if request.method == 'POST':
+        form = no_attending_form(request.POST)
+        mail = alumnievent.objects.all().values_list('email', flat='true')
+        if form.is_valid() and form.data['email'] in mail :
+            a=alumni.objects.filter(email=form.data['email'])
+            a.update(no_attending=form.data['no_attending'])
+            return render(request,'osat/h_registration.html', {'no_attending_form':no_attending_form,'suc':1,'email1':0})
+        else:
+            return render(request, 'osat/h_registration.html', {'no_attending_form':no_attending_form,'suc': 0,'email1':1})
+    else:
+        return render(request,"osat/h_registration.html",{'no_attending_form':no_attending_form,'suc':0,'email1':0})
 def e_registration(request):
     return render(request,"osat/e_registration.html")
 def c_us(request):
