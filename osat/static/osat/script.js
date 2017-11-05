@@ -13,8 +13,13 @@ $(document).ready(function(){
     $("#slid7").hide();
     $("#menu-items").hide();
     $("#b2").hide();
+    $("#outer").hide();
+    $("#er").hide();
+    $("#e_text").hide();
 
-
+    $("#e_text").fadeIn(1000);
+    $("#outer").fadeIn(3000);
+    $("#er").fadeIn(2000);
     $("#slid1").fadeIn(2000);
     $("#b2").fadeIn(2000);
     $("#slid2").fadeIn(2000);

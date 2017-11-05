@@ -1,10 +1,12 @@
 {% extends 'osat/base.html' %}
 {% load staticfiles %}
 {% block body %}
+<div id="er" style="color:white;">
     <p>Select the event you want to register for</p>
     <ul>
     {% for i in a %}
 <li><a href="{% url 'osat:er_registration2' i.event %}">{{ i.event }}</a></li>
     {%  endfor %}
     </ul>
+</div>
 {% endblock %}
