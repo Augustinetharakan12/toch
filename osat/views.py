@@ -160,3 +160,16 @@ def el_registration3(request):
     else:
         return render(request,"osat/view_events.html",{'view_events_form':view_events_form,'suc':0,'email1':0})
 
+def admin2(request):
+    a=alumni
+    a=a.objects.all().order_by('year_pass')
+    id="osatadmin"
+    passw="osat12345"
+    if request.method=='POST':
+        form = ec_login_form(request.POST)
+        if form.is_valid() and form.data['email'] in id and form.data['password'] in passw:
+            return render(request,'osat/admin2.html',{'ec_login_form':ec_login_form ,'suc':1,'a':a})
+        else:
+            return render(request, 'osat/admin2.html', {'ec_login_form': ec_login_form, 'suc': 0,'a':a})
+    else:
+        return render(request,"osat/admin2.html",{'ec_login_form':ec_login_form,'suc':0,'a':a})

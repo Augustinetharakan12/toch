@@ -1,0 +1,42 @@
+{% extends 'osat/base.html' %}
+{% load staticfiles %}
+{% block body %}
+{% if suc == 0 %}
+<form method="post"> {% csrf_token %}
+        <div class="rform" id="reg2" style="width:120%;">
+    <label >Login id</label>
+        {{ ec_login_form.email }}
+	<label >password</label>
+        {{ ec_login_form.password }}
+        <div class="pbutton" id="reg3">
+        <input type="submit" class="btn btn-primary">
+        </div>
+        </div>
+    </form>
+{% else %}
+   <div class="container" style="width:700px;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Phone no:</th>
+        <th>Year of passout</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in a %}
+      <tr>
+        <td>{{ i.fname }}</td>
+        <td>{{ i.lname }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.phno }}</td>
+        <td>{{ i.year_pass }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+{% endblock %}
