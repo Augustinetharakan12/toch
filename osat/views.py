@@ -50,7 +50,7 @@ def c_us(request):
 def h_registration(request):
     if request.method == 'POST':
         form = no_attending_form(request.POST)
-        mail = alumnievent.objects.all().values_list('email', flat='true')
+        mail = alumni.objects.all().values_list('email', flat='true')
         if form.is_valid() and form.data['email'] in mail :
             a=alumni.objects.filter(email=form.data['email'])
             a.update(no_attending=form.data['no_attending'])
@@ -162,14 +162,19 @@ def el_registration3(request):
 
 def admin2(request):
     a=alumni
+    sum_of_alumni=0
+    sum_of_attending=0
     a=a.objects.all().order_by('year_pass')
+    for i in a:
+        sum_of_alumni=sum_of_alumni+1
+        sum_of_attending=sum_of_attending+i.no_attending
     id="osatadmin"
     passw="osat12345"
     if request.method=='POST':
         form = ec_login_form(request.POST)
         if form.is_valid() and form.data['email'] in id and form.data['password'] in passw:
-            return render(request,'osat/admin2.html',{'ec_login_form':ec_login_form ,'suc':1,'a':a})
+            return render(request,'osat/admin2.html',{'ec_login_form':ec_login_form ,'suc':1,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
         else:
-            return render(request, 'osat/admin2.html', {'ec_login_form': ec_login_form, 'suc': 0,'a':a})
+            return render(request, 'osat/admin2.html', {'ec_login_form': ec_login_form, 'suc': 0,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
     else:
-        return render(request,"osat/admin2.html",{'ec_login_form':ec_login_form,'suc':0,'a':a})
+        return render(request,"osat/admin2.html",{'ec_login_form':ec_login_form,'suc':0,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})

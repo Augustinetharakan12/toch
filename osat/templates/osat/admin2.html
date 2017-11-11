@@ -14,25 +14,27 @@
         </div>
     </form>
 {% else %}
-   <div class="container" style="width:700px;">
+<h style="color:white;">Total no of alumni's registered:<span class="badge">{{ sum_of_alumni }}</span></h>
+<p style="color:white;">Total no of alumni's attending:<span class="badge">{{ sum_of_attending }}</span></p>
+   <div class="container" style="width:900px;">
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Last name</th>
-        <th>Email</th>
-        <th>Phone no:</th>
-        <th>Year of passout</th>
+        <th style="color:white;">Name</th>
+        <th style="color:white;">Last name</th>
+        <th style="color:white;">Email</th>
+        <th style="color:white;">Phone no:</th>
+        <th style="color:white;">Year of passout</th>
       </tr>
     </thead>
     <tbody>
     {% for i in a %}
       <tr>
-        <td>{{ i.fname }}</td>
-        <td>{{ i.lname }}</td>
-        <td>{{ i.email }}</td>
-        <td>{{ i.phno }}</td>
-        <td>{{ i.year_pass }}</td>
+        <td style="color:white;">{{ i.fname }}</td>
+        <td style="color:white;">{{ i.lname }}</td>
+        <td style="color:white;">{{ i.email }}</td>
+        <td style="color:white;">{{ i.phno }}</td>
+        <td style="color:white;">{{ i.year_pass }}</td>
       </tr>
     {% endfor %}
     </tbody>

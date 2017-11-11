@@ -12,13 +12,13 @@ class alumni(models.Model):
     email=models.CharField(max_length=100,null=True)
     #dob=models.DateField
     # address info
-    a_street = models.CharField(max_length=200,null=True)
-    a_city = models.CharField(max_length=200,null=True)
-    a_state = models.CharField(max_length=200,null=True)
-    a_country = models.CharField(max_length=200,null=True)
-    a_pin = models.CharField(max_length=50,null=True)
+    #a_street = models.CharField(max_length=200,null=True)
+    #a_city = models.CharField(max_length=200,null=True)
+    #a_state = models.CharField(max_length=200,null=True)
+    #a_country = models.CharField(max_length=200,null=True)
+    #a_pin = models.CharField(max_length=50,null=True)
     #event info
-    event=models.CharField(max_length=30,default='none')
+    #event=models.CharField(max_length=30,default='none')
 
     no_attending=models.IntegerField(default=0)
 
