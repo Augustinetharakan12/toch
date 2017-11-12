@@ -172,7 +172,7 @@ def admin2(request):
     passw="osat12345"
     if request.method=='POST':
         form = ec_login_form(request.POST)
-        if form.is_valid() and form.data['email'] in id and form.data['password'] in passw:
+        if form.is_valid() and form.data['email'] == id and form.data['password'] == passw:
             return render(request,'osat/admin2.html',{'ec_login_form':ec_login_form ,'suc':1,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
         else:
             return render(request, 'osat/admin2.html', {'ec_login_form': ec_login_form, 'suc': 0,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
