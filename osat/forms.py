@@ -63,3 +63,13 @@ class no_attending_form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class':'form-control'
             })
+class notificationsform(forms.ModelForm):
+    class Meta:
+        model=notif
+        fields=('fname','title','description')
+    def __init__(self, *args, **kwargs):
+        super(notificationsform, self).__init__(*args, **kwargs)
+        for field in iter(self.fields):
+            self.fields[field].widget.attrs.update({
+                'class': 'form-control',
+            })

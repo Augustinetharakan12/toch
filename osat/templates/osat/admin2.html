@@ -1,5 +1,13 @@
 {% extends 'osat/base.html' %}
 {% load staticfiles %}
+
+{% block body2 %}
+    {% if suc == 1 %}
+      <button ><a href="{% url 'osat:admin2notification' %}">Add a notification</a></button>
+    {% endif %}
+{% endblock %}
+
+
 {% block body %}
 {% if suc == 0 %}
 <form method="post"> {% csrf_token %}
@@ -16,6 +24,9 @@
 {% else %}
 <h style="color:white;">Total no of alumni's registered:<span class="badge">{{ sum_of_alumni }}</span></h>
 <p style="color:white;">Total no of alumni's attending:<span class="badge">{{ sum_of_attending }}</span></p>
+
+<hr>
+<p style="color:white;">List of all the registered members</p>
    <div class="container" style="width:900px;">
   <table class="table">
     <thead>
@@ -41,4 +52,5 @@
   </table>
 </div>
 {% endif %}
+
 {% endblock %}

@@ -24,5 +24,6 @@ urlpatterns = [
 
 
     url(r'^admin2/$', views.admin2, name='admin2'),
+    url(r'^admin2notification/$', views.admin2notification, name='admin2notification'),
 
 ]

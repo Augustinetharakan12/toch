@@ -178,3 +178,26 @@ def admin2(request):
             return render(request, 'osat/admin2.html', {'ec_login_form': ec_login_form, 'suc': 0,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
     else:
         return render(request,"osat/admin2.html",{'ec_login_form':ec_login_form,'suc':0,'a':a,'sum_of_alumni':sum_of_alumni,'sum_of_attending':sum_of_attending})
+def admin2notification(request):
+    a = alumni
+    sum_of_alumni = 0
+    sum_of_attending = 0
+    a = a.objects.all().order_by('year_pass')
+    for i in a:
+        sum_of_alumni = sum_of_alumni + 1
+        sum_of_attending = sum_of_attending + i.no_attending
+    id = "osatadmin"
+    passw = "osat12345"
+    if request.method == 'POST':
+        form = notificationsform(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'osat/admin2.html',
+                          {'ec_login_form': ec_login_form, 'suc': 1, 'a': a, 'sum_of_alumni': sum_of_alumni,
+                           'sum_of_attending': sum_of_attending, 'notificationsform': notificationsform})
+        else:
+            return render(request, 'osat/admin2.html',
+                          {'ec_login_form': ec_login_form, 'suc': 1, 'a': a, 'sum_of_alumni': sum_of_alumni,
+                           'sum_of_attending': sum_of_attending, 'notificationsform': notificationsform})
+    else:
+        return render(request,'osat/admin2notification.html',{'notificationsform':notificationsform})

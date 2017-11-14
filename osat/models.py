@@ -27,7 +27,7 @@ class alumni(models.Model):
 class notif(models.Model):
     fname=models.CharField(max_length=510,null=True)
     title=models.CharField(max_length=50,null=True)
-    description=models.CharField(max_length=50,null=True)
+    description=models.CharField(max_length=500,null=True)
     timestamp=models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.title+' '+ self.fname
